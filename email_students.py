@@ -73,7 +73,7 @@ def main(assignment, grade_column, email_column, notify):
 
     if not (
         notify
-        or click.confirm(f"Are you sure you want to email students?")
+        and click.confirm(f"Are you sure you want to email students?")
     ):
         click.echo("Aborting.")
         return
